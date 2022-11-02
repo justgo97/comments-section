@@ -35,7 +35,7 @@ On mobile
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/interactive-comments-section-with-reactjs-M3A1VM4cDq](https://www.frontendmentor.io/solutions/interactive-comments-section-with-reactjs-M3A1VM4cDq)
 - Live Site URL: [https://justgo97.github.io/comments-section/](https://justgo97.github.io/comments-section/)
 
 ## My process
