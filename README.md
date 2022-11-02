@@ -36,7 +36,7 @@ On mobile
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://justgo97.github.io/comments-section/](https://justgo97.github.io/comments-section/)
 
 ## My process
 
