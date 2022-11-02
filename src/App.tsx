@@ -147,6 +147,9 @@ function CommentComponent({
   const [newReply, setNewRply] = React.useState("");
   const [commentString, setCommentString] = React.useState(comment.content);
   const [editString, setEditString] = React.useState(comment.content);
+  const [commentScore, setCommentScore] = React.useState(
+    comment.score as number
+  );
   const modalRef = React.useRef<HTMLDivElement>(null);
 
   function onClickDelete() {
@@ -217,16 +220,28 @@ function CommentComponent({
     setEditString(event.target.value);
   }
 
+  function onClickUpvote() {
+    setCommentScore((state) => state + 1);
+  }
+
+  function onClickDownvote() {
+    setCommentScore((state) => state + -1);
+  }
+
   return (
     <>
       <div className="comments-item">
         <div className="comments-item-votes">
           <div className="comments-item-votes-up">
-            <img src="./images/icon-plus.svg" alt="" />
+            <img onClick={onClickUpvote} src="./images/icon-plus.svg" alt="" />
           </div>
-          <div className="comments-item-votes-score">{comment.score}</div>
+          <div className="comments-item-votes-score">{commentScore}</div>
           <div className="comments-item-votes-down">
-            <img src="./images/icon-minus.svg" alt="" />
+            <img
+              onClick={onClickDownvote}
+              src="./images/icon-minus.svg"
+              alt=""
+            />
           </div>
         </div>
         <div className="comments-item-main">
@@ -322,11 +337,19 @@ function CommentComponent({
           <div className="comments-item-main-footer">
             <div className="comments-item-main-footer-votes">
               <div className="comments-item-main-footer-votes-up">
-                <img src="./images/icon-plus.svg" alt="" />
+                <img
+                  onClick={onClickUpvote}
+                  src="./images/icon-plus.svg"
+                  alt=""
+                />
               </div>
-              <div className="comments-item-votes-score">{comment.score}</div>
+              <div className="comments-item-votes-score">{commentScore}</div>
               <div className="comments-item-main-footer-votes-down">
-                <img src="./images/icon-minus.svg" alt="" />
+                <img
+                  onClick={onClickDownvote}
+                  src="./images/icon-minus.svg"
+                  alt=""
+                />
               </div>
             </div>
             <div className="comments-item-main-footer-end">
